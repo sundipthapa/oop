@@ -1,6 +1,6 @@
 import javax.swing.*;
 //1.Write a program to take student details as input and display the result.
-public class Joptionfile{
+public class Task2{
     public static void main(String[] args){
         int age;
         String name, address;
