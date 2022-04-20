@@ -39,6 +39,8 @@ For next 100 units Rs. 0.75/unit
 For next 100 units Rs. 1.20/unit
 For unit above 250 Rs. 1.50/unit
 An additional surcharge of 20% is added to the bill*/
+
+///*1. Write a JAVA program to find maximum between two numbers.
 public class Task3 {
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
@@ -56,8 +58,8 @@ public class Task3 {
         }
     }
 }
-
-class B{
+//2. Write a JAVA program to find maximum between three numbers.
+class Greater{
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
 
@@ -80,7 +82,8 @@ class B{
     }
 
 }
-class Cc{
+//3. Write a JAVA program to check whether a number is negative, positive or zero.
+class Checkout{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
@@ -88,17 +91,18 @@ class Cc{
         double a = s.nextDouble();
 
         if (a==0){
-            System.out.println("the no is zero");
+            System.out.println("the number is zero");
         }
         else if (a>0){
-            System.out.println("the no is positive");
+            System.out.println("the number is positive");
         }
         else{
-            System.out.println("the no is negative");
+            System.out.println("the number is negative");
         }
     }
 }
-class Dd{
+//4. Write a JAVA program to check whether a number is divisible by 5 and 11 or not.
+class Divisionnum{
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
 
@@ -116,12 +120,10 @@ class Dd{
         }
     }
 }
-/*5. Write a JAVA program to check whether a number is even or odd.
-6. Write a JAVA program to check whether a year is leap year or not.
-7. Write a JAVA program to check whether a character is alphabet or not.
-8. Write a JAVA program to input any alphabet and check whether it is vowel or consonant.
-9. Write a JAVA program to input any character and check whether it is alphabet, digit or special
-character.*/
+/*5.
+Write a JAVA program to check whether a number is even or odd.
+
+*/
 class Even{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -137,6 +139,7 @@ class Even{
         }
     }
 }
+//7. Write a JAVA program to check whether a character is alphabet or not.
 class Alphabet{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -152,6 +155,7 @@ class Alphabet{
         }
     }
 }
+//6. Write a JAVA program to check whether a year is leap year or not.
 class Leap{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -166,6 +170,8 @@ class Leap{
         }
     }
 }
+//8. Write a JAVA program to input any alphabet and check whether it is vowel or consonant.
+
 class Vowel{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -181,8 +187,9 @@ class Vowel{
         }
     }
 }
-
-class Alp_dig_sp{
+//9. Write a JAVA program to input any character and check whether it is alphabet, digit or special
+//character.
+class Alphadigits{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
@@ -201,13 +208,8 @@ class Alp_dig_sp{
     }
 }
 
-/*10. Write a JAVA program to check whether a character is uppercase or lowercase alphabet.
-
-
-13. Write a JAVA program to count total number of notes in given amount.
-14. Write a JAVA program to input angles of a triangle and check whether triangle is valid or not.
-15. Write a JAVA program to input all sides of a triangle and check whether triangle is valid or not.*/
-class Upper{
+//10. Write a JAVA program to check whether a character is uppercase or lowercase alphabet.
+class upperalphabetic{
     public static void main(String[] args) {
         Scanner  scanner=new Scanner(System.in);
 
@@ -226,8 +228,8 @@ class Upper{
 
     }
 }
-/*11. Write a JAVA program to input week number and print weekday.*/
-class Week{
+//11. Write a JAVA program to input week number and print weekday.
+class Checkweeks{
     public static void main(String[] args) {
         Scanner  scanner=new Scanner(System.in);
 
@@ -260,7 +262,7 @@ class Week{
 
 }
 //12. Write a JAVA program to input month number and print number of days in that month.
-class Month{
+class CheckMonth{
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
@@ -307,29 +309,30 @@ class Month{
         }
     }
 }
-
-class Triangle{
+//14. Write a JAVA program to input angles of a triangle and check whether triangle is valid or not.
+class Validtriangle{
     public static void main(String[] args) {
         Scanner scanner =new Scanner(System.in);
 
-        System.out.println("Enter the first angle: ");
+        System.out.println("Enter first angle: ");
         float f=scanner.nextFloat();
-        System.out.println("Enter the second angle: ");
+        System.out.println("Enter second angle: ");
         float s=scanner.nextFloat();
-        System.out.println("Enter the third angle: ");
+        System.out.println("Enter third angle: ");
         float t=scanner.nextFloat();
 
         float sum=f+s+t;
 
         if (sum==180){
-            System.out.println("The triangle is valid");
+            System.out.println("triangle is valid");
         }
         else {
-            System.out.println("The triangle is not valid");
+            System.out.println("triangle is not valid");
         }
     }
 }
-class Side{
+//15. Write a JAVA program to input all sides of a triangle and check whether triangle is valid or not.*/
+class Sidevalidation{
     public static void main(String[] args) {
         Scanner scanner =new Scanner(System.in);
 
@@ -350,39 +353,76 @@ class Side{
         }
     }
 }
-class Note{
+//13. Write a JAVA program to count total number of notes in given amount.
+class notescounting{
     public static void main(String[] args) {
-        Scanner scanner =new Scanner(System.in);
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter your amount");
+        int amount = obj.nextInt();
+        int note1000,note500, note100, note50, note20, note10, note5, note2, note1;
+        note1000 = note500 = note100 = note50 = note20 = note10 = note5 = note2 = note1 = 0;
+        if(amount >= 1000)
+        {
+            note1000 = amount/1000;
+            amount -= note1000 * 1000;
+        }
+        if(amount >= 500)
+        {
+            note500 = amount/500;
+            amount -= note500 * 500;
+        }
+        if(amount >= 100)
+        {
+            note100 = amount/100;
+            amount -= note100 * 100;
+        }
+        if(amount >= 50)
+        {
+            note50 = amount/50;
+            amount -= note50 * 50;
+        }
+        if(amount >= 20)
+        {
+            note20 = amount/20;
+            amount -= note20 * 20;
+        }
+        if(amount >= 10)
+        {
+            note10 = amount/10;
+            amount -= note10 * 10;
+        }
+        if(amount >= 5)
+        {
+            note5 = amount/5;
+            amount -= note5 * 5;
+        }
+        if(amount >= 2)
+        {
+            note2 = amount /2;
+            amount -= note2 * 2;
+        }
+        if(amount >= 1)
+        {
+            note1 = amount;
+        }
 
-        System.out.println("Enter the amount: ");
-        int rupee=scanner.nextInt();
-        int count=0;
-        if (rupee>=1000){
-
-            count = rupee;//1000;
-        }
-        if (rupee>=500&& rupee<1000){
-            count = rupee;//500;
-        }
-        if (rupee>=100 && rupee<500){
-            count = rupee;//100;
-        }
-        if (rupee>=50 && rupee<100){
-            count=rupee;//50;
-        }
-        if (rupee>=20 && rupee<50){
-            count=rupee;//20;
-        }
-        if{
-            count=rupee;//10;
-        }
-        System.out.println("The total no of notes is : "+count);
+        System.out.println("Total number of notes = \n");
+        System.out.println("1000 = "+note1000+"\n");
+        System.out.println("500 = "+note500+"\n");
+        System.out.println("100 = "+note100+"\n");
+        System.out.println("50 = "+note50+"\n");
+        System.out.println("20 = "+note20+"\n");
+        System.out.println("10 = "+note10+"\n");
+        System.out.println("5 = "+note5+"\n");
+        System.out.println("2 = "+note2+"\n");
+        System.out.println("1 = "+note1+"\n");
     }
 }
+
 /*16. Write a JAVA program to check whether the triangle is equilateral, isosceles or scalene triangle.
  */
 
-class Determine_triangle{
+class Checktriangle{
     public static void main(String[] args) {
         Scanner scanner =new Scanner(System.in);
 
@@ -405,7 +445,7 @@ class Determine_triangle{
     }
 }
 //17.
-class RootsOfQuadratic {
+class Quadratic {
     public static void main(String args[]) {
         double secondRoot , firstRoot;
         Scanner sc = new Scanner(System.in);
@@ -441,7 +481,7 @@ class RootsOfQuadratic {
 
 
 //18. Write a JAVA program to calculate profit or loss.
-class Profit_loss{
+class Profitlossdata{
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
@@ -468,57 +508,50 @@ Percentage >= 70% : Grade C
 Percentage >= 60% : Grade D
 Percentage >= 40% : Grade E
 Percentage < 40% : Grade F*/
-class Marks{
+class CheckMarks {
     public static void main(String[] args) {
-        Scanner scanner =new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the marks of Physics sub ");
-        double f=scanner.nextDouble();
+        double f = scanner.nextDouble();
         System.out.println("Enter the marks of Chemistry sub ");
-        double s=scanner.nextDouble();
+        double s = scanner.nextDouble();
         System.out.println("Enter the marks of math sub ");
-        double t=scanner.nextDouble();
+        double t = scanner.nextDouble();
         System.out.println("Enter the marks of social sub ");
-        double four=scanner.nextDouble();
+        double four = scanner.nextDouble();
         System.out.println("Enter the marks of Biology sub ");
-        double five=scanner.nextDouble();
+        double five = scanner.nextDouble();
 
-        double t_marks=f+s+t+four+five;
-        double percent=(t_marks)/5;
+        double t_marks = f + s + t + four + five;
+        double percent = (t_marks) / 5;
 
-        System.out.println("you total marks is "+ t_marks);
-        System.out.println("you total percent is "+ percent);
+        System.out.println("you total marks is " + t_marks);
+        System.out.println("you total percent is " + percent);
 
-        if (percent>=90){
+        if (percent >= 90) {
             System.out.println("Grade A");
-        }
-        else if (percent>=80 && percent<=90){
+        } else if (percent >= 80 && percent <= 90) {
             System.out.println("Grade B");
-        }
-        else if(percent>=70 && percent<=80){
+        } else if (percent >= 70 && percent <= 80) {
             System.out.println("Grade C");
-        }
-        else if (percent>=60 && percent<=70){
+        } else if (percent >= 60 && percent <= 70) {
             System.out.println("Grade D");
-        }
-        else if (percent>=50 && percent<=60){
+        } else if (percent >= 50 && percent <= 60) {
             System.out.println("Grade E");
-        }
-        else if (percent>=40 && percent<=50){
+        } else if (percent >= 40 && percent <= 50) {
             System.out.println("Grade F");
-        }
-        else{
+        } else {
             System.out.println("fail");
         }
     }
 }
-    You sent
 /*20. Write a JAVA program to input basic salary of an employee and calculate its Gross salary
 according to following:
 Basic Salary <= 10000 : HRA = 20%, DA = 80%
 Basic Salary <= 20000 : HRA = 25%, DA = 90%
 Basic Salary > 20000 : HRA = 30%, DA = 95%*/
-class Salary{
+class Salaryupdate{
     public static void main(String[] args) {
         double b_salary, hra, da, gross;
         Scanner scanner= new Scanner(System.in);
@@ -550,7 +583,7 @@ For next 100 units Rs. 0.75/unit
 For next 100 units Rs. 1.20/unit
 For unit above 250 Rs. 1.50/unit
 An additional surcharge of 20% is added to the bill*/
-class Electricity{
+class Electricityconsume{
     public static void main(String[] args) {
         double units, bill_amount;
         Scanner scanner= new Scanner(System.in);
@@ -573,5 +606,4 @@ class Electricity{
         System.out.println("The total bill amount is "+ bill_amount);
     }
 }
-    Write to Anuska Magar
 
