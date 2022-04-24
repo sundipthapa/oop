@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 /*1. Write a JAVA program to find maximum between two numbers.
 2. Write a JAVA program to find maximum between three numbers.
 3. Write a JAVA program to check whether a number is negative, positive or zero.
@@ -109,13 +110,9 @@ class Divisionnum{
         System.out.println("Enter the first no: ");
         double a=s.nextDouble();
 
-        if (a%5==0){
-            System.out.println(a+" is divisible by 5");
-        }
-        else if (a%11==0){
-            System.out.println(a+" is divisible by 11");
-        }
-        else{
+        if (a%5==0 && a%11==0){
+            System.out.println(a+" is divisible by 5 and 11");
+        } else{
             System.out.println(a+" is not divisible by 5 and 11");
         }
     }
@@ -145,7 +142,7 @@ class Alphabet{
         Scanner s = new Scanner(System.in);
 
         System.out.println("Enter the character: ");
-        char c = s.next().charAt(0);
+        char c = s.next().charAt(0); //Initialize the character
 
         if ((c>='a' && c<='z')||(c>='A' && c<='Z')){
             System.out.println(c+"the character is  alphabet");
@@ -159,11 +156,11 @@ class Alphabet{
 class Leap{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-
+//or you can take input of year and day do by another method
         System.out.println("Enter the year: ");
         int a = s.nextInt();
 
-        if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0) {
+        if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0) {
             System.out.println(a + "\t is leap year");
         } else {
             System.out.println(a+" is not leap year");
@@ -189,6 +186,7 @@ class Vowel{
 }
 //9. Write a JAVA program to input any character and check whether it is alphabet, digit or special
 //character.
+//*note: chr*
 class Alphadigits{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -209,9 +207,11 @@ class Alphadigits{
 }
 
 //10. Write a JAVA program to check whether a character is uppercase or lowercase alphabet.
+//user upper() and lower() method to do it
 class upperalphabetic{
     public static void main(String[] args) {
         Scanner  scanner=new Scanner(System.in);
+        //user isupper and islower
 
         System.out.println("Enter a  character");
         char ch=scanner.next().charAt(0);
@@ -264,51 +264,55 @@ class Checkweeks{
 //12. Write a JAVA program to input month number and print number of days in that month.
 class CheckMonth{
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-
+        Scanner scanner = new Scanner(System.in);
+        String daymonth;
+        String MonthName;
         System.out.println("Enter the month number: ");
-        int month=scanner.nextInt();
+        int month = scanner.nextInt();
+        System.out.println("Enter the year: ");
+        int year = scanner.nextInt();
+        if (month == 1) {
 
-        switch(month){
-            case 1 :
-                System.out.println("the month is January and there is 31 days");
-                break;
-            case 2 :
-                System.out.println("the month is February and there is 28 days");
-                break;
-            case 3 :
-                System.out.println("the month is March and there is 31 days");
-                break;
-            case 4 :
-                System.out.println("the month is April and there is 30 days");
-                break;
-            case 5 :
-                System.out.println("the month is May and there is 31 days");
-                break;
-            case 6 :
-                System.out.println("the month is June and there is 30 days");
-                break;
-            case 7 :
-                System.out.println("the month is July and there is 31 days");
-                break;
-            case 8 :
-                System.out.println("the month is August and there is 31 days");
-                break;
-            case 9 :
-                System.out.println("the month is September and there is 30 days");
-                break;
-            case 10 :
-                System.out.println("the month is October and there is 31 days");
-                break;
-            case 11 :
-                System.out.println("the month is November and there is 30 days");
-                break;
-            case 12 :
-                System.out.println("the month is December and there is 31 days");
-                break;
-        }
+//        switch(month){
+//            case 1 :
+//                System.out.println("the month is January and there is 31 days");
+//                break;
+//            case 2 :
+//                System.out.println("the month is February and there is 28 days");
+//                break;
+//            case 3 :
+//                System.out.println("the month is March and there is 31 days");
+//                break;
+//            case 4 :
+//                System.out.println("the month is April and there is 30 days");
+//                break;
+//            case 5 :
+//                System.out.println("the month is May and there is 31 days");
+//                break;
+//            case 6 :
+//                System.out.println("the month is June and there is 30 days");
+//                break;
+//            case 7 :
+//                System.out.println("the month is July and there is 31 days");
+//                break;
+//            case 8 :
+//                System.out.println("the month is August and there is 31 days");
+//                break;
+//            case 9 :
+//                System.out.println("the month is September and there is 30 days");
+//                break;
+//            case 10 :
+//                System.out.println("the month is October and there is 31 days");
+//                break;
+//            case 11 :
+//                System.out.println("the month is November and there is 30 days");
+//                break;
+//            case 12 :
+//                System.out.println("the month is December and there is 31 days");
+//                break;
+//        }
     }
-}
+
 //14. Write a JAVA program to input angles of a triangle and check whether triangle is valid or not.
 class Validtriangle{
     public static void main(String[] args) {
@@ -419,6 +423,9 @@ class notescounting{
     }
 }
 
+//write a java program to count total number of notes in given amount;
+
+
 /*16. Write a JAVA program to check whether the triangle is equilateral, isosceles or scalene triangle.
  */
 
@@ -466,7 +473,7 @@ class Quadratic {
             secondRoot = (-b - sqrt) / (2 * a);
             System.out.println("Roots are :: " + firstRoot + " and " + secondRoot);
         } else if (determinant == 0) {
-            System.out.println("Root is :: " + (-b + sqrt) / (2 * a));
+            System.out.println("Root is :: " + (-b) / (2 * a));
         }
         else {
 
@@ -478,6 +485,7 @@ class Quadratic {
         }
     }
 }
+
 
 
 //18. Write a JAVA program to calculate profit or loss.
@@ -583,27 +591,43 @@ For next 100 units Rs. 0.75/unit
 For next 100 units Rs. 1.20/unit
 For unit above 250 Rs. 1.50/unit
 An additional surcharge of 20% is added to the bill*/
-class Electricityconsume{
+class Electricityconsume {
     public static void main(String[] args) {
         double units, bill_amount;
-        Scanner scanner= new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("enter the total units consumed");
-        units=scanner.nextDouble();
+        units = scanner.nextDouble();
 
-        if (units<=50){
-            bill_amount=units*0.5;
+        if (units <= 50) {
+            bill_amount = units * 0.5;
         }
-        if (units>50 && units<=100){
-            bill_amount=units*0.75;
+        if (units > 50 && units <= 100) {
+            bill_amount = units * 0.75;
         }
-        if (units>100 && units<=250){
-            bill_amount=units*1.20;
+        if (units > 100 && units <= 250) {
+            bill_amount = units * 1.20;
+        } else {
+            bill_amount = units * 1.50;
         }
-        else {
-            bill_amount=units*1.50;
-        }
-        System.out.println("The total bill amount is "+ bill_amount);
+        System.out.println("The total bill amount is " + bill_amount);
     }
 }
 
+class cost{
+    public static void main(String[] args) {
+        int Units:
+        double Amount, Sur_Charge, Total_Amount;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Please Enter the Uinits that you consumed:");
+        Units=sc.nextInt();
+        if (Units<=50){
+            Amount =Units * 0.5;
+            Sur_Charge=0.2 *Amount;
+        }
+        else if (Units<=150){
+            Amount =25+(Units -50) *;
+            Sur_Charge=0.2 *Amount;
+        }
+    }
+}

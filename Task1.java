@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //1.Write a program to take student details as input and display the result.
-public class Questions {
+public class Task1 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.print("Enter your name:");
